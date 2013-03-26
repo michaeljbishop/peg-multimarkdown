@@ -161,7 +161,7 @@
 				65F0B66813DF47CC00D0980C /* odf.c */,
 				65F0B66913DF47CC00D0980C /* odf.h */,
 				65F0B66A13DF47CC00D0980C /* parsing_functions.c */,
-				65F0B66B13DF47CC00D0980C /* peg-0.1.4 */,
+				65F0B66B13DF47CC00D0980C /* peg */,
 				65F0B69A13DF47CC00D0980C /* utility_functions.c */,
 			);
 			name = Source;
@@ -195,7 +195,7 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		65F0B66B13DF47CC00D0980C /* peg-0.1.4 */ = {
+		65F0B66B13DF47CC00D0980C /* peg */ = {
 			isa = PBXGroup;
 			children = (
 				65F0B66C13DF47CC00D0980C /* compile.c */,
@@ -212,7 +212,8 @@
 				65F0B69713DF47CC00D0980C /* tree.h */,
 				65F0B69913DF47CC00D0980C /* version.h */,
 			);
-			path = "peg-0.1.4";
+			name = peg;
+			path = "peg-0.1.9";
 			sourceTree = "<group>";
 		};
 		65F0B8B513DF6D4700D0980C /* Generated Sources */ = {
@@ -261,7 +262,7 @@
 			buildPhases = (
 			);
 			buildToolPath = /usr/bin/make;
-			buildWorkingDirectory = "./peg-0.1.4";
+			buildWorkingDirectory = "./$(PEG_DIR)";
 			dependencies = (
 			);
 			name = Peg;
@@ -352,7 +353,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./peg/leg -o markdown_parser.c markdown_parser.leg";
+			shellScript = "./$PEG_DIR/leg -o markdown_parser.c markdown_parser.leg";
 		};
 		65F0B8E913DF714E00D0980C /* Run Tests */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -452,6 +453,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PEG_DIR = "peg-$(PEG_VERSION)";
+				PEG_VERSION = 0.1.9;
 				PREBINDING = NO;
 				SDKROOT = macosx;
 			};
@@ -469,6 +472,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PEG_DIR = "peg-$(PEG_VERSION)";
+				PEG_VERSION = 0.1.9;
 				PREBINDING = NO;
 				SDKROOT = macosx;
 			};
@@ -520,6 +525,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PEG_DIR = "peg-$(PEG_VERSION)";
+				PEG_VERSION = 0.1.9;
 				PREBINDING = NO;
 				SDKROOT = macosx;
 			};
